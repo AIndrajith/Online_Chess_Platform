@@ -1,21 +1,22 @@
 # Online Multiplayer Chess Platform ♟️
 
-A production-style **online multiplayer chess application** built using **Python and FastAPI**, focusing on real-time gameplay, clean backend architecture, and containerized deployment.
+A **backend-first, production-style online multiplayer chess platform** built using **Python and FastAPI**, focusing on clean architecture, real-time communication, and scalable system design.
 
-> 🚧 Project Status: **In Progress (Active Development)**
+> 🚧 **Project Status:** In Progress (Active Development)  
+> 🛠️ **Current Phase:** Backend foundation & database connectivity
 
 ---
 
-## 🎯 Project Goal
+## 🎯 Project Objective
 
-The goal of this project is to design and develop a **real-time online chess platform** where two remote players can play a complete chess game with:
+The objective of this project is to design and build a **real-time online chess platform** where two remote players can play a complete chess game with:
 
 - Enforced chess rules
 - Live move synchronization
 - User authentication
 - Persistent game state
 
-This project is being built with a **backend-first, engineering-focused approach**, following real-world software development practices.
+The project is developed using a **real-world backend engineering approach**, emphasizing clear separation of concerns, maintainability, and production readiness.
 
 ---
 
@@ -24,17 +25,18 @@ This project is being built with a **backend-first, engineering-focused approach
 ### Backend
 - Python 3.11
 - FastAPI
-- WebSockets (for real-time gameplay)
+- WebSockets (planned)
 
 ### Chess Logic
-- python-chess
+- python-chess (planned)
 
 ### Database
 - MySQL
+- SQLAlchemy (ORM)
 
 ### Frontend
 - HTML, CSS, JavaScript  
-  (served via FastAPI)
+  (served by FastAPI — planned)
 
 ### DevOps & Deployment
 - Docker
@@ -42,25 +44,36 @@ This project is being built with a **backend-first, engineering-focused approach
 
 ### Tooling
 - Git & GitHub
-- Virtual Environments (venv)
+- Virtual Environment (venv)
 
 ---
 
-## 🏗️ Project Structure
+## 📌 Current Implementation Status
+
+✅ FastAPI application initialized  
+✅ Backend entry point (`main.py`) established  
+✅ Health / proof-of-life endpoint implemented  
+✅ Database connection layer created (MySQL + SQLAlchemy)  
+🚫 No database tables or models yet  
+🚫 No business logic implemented yet  
+
+This phase focuses on **infrastructure and architecture**, not features.
+
+---
+
+## 🏗️ Project Structure (Current)
 
 ```text
 online-chess/
 │
 ├── app/
-│   ├── main.py            # FastAPI entry point
-│   ├── websocket.py       # Real-time game handling
-│   ├── models/            # Database models
-│   ├── routes/            # API routes
-│   ├── services/          # Business logic
-│   └── database.py        # Database connection
+│   ├── main.py              # FastAPI application entry point
+│   └── database/
+│       ├── database.py      # Database engine & session factory
+│       └── deps.py          # Database dependency provider
 │
-├── frontend/              # Client-side UI
-├── tests/                 # Automated tests
-├── docs/                  # Documentation
+├── frontend/                # Frontend (planned)
+├── tests/                   # Automated tests (planned)
+├── docs/                    # Documentation
 ├── requirements.txt
 └── README.md
