@@ -19,4 +19,4 @@ SessionLocal = sessionmaker(
 
 def init_db():          # tables are created when only init_db() is called
     import Backend.app.models
-    Base.metadata.create_all(bind=engine)
+    Base.metadata.create_all(bind=engine) # -> create tables only if they do not already exist.
